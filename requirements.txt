@@ -31,6 +31,7 @@ defusedxml==0.7.1
 distrax==0.1.5
 dm-tree==0.1.9
 docker-pycreds==0.4.0
+einops==0.8.1
 equinox==0.11.11
 etils==1.11.0
 executing==2.1.0
@@ -202,6 +203,7 @@ toolz==1.0.0
 torch==2.6.0
 torchvision==0.21.0
 tornado==6.4.2
+tqdm==4.67.1
 traitlets==5.14.3
 triton==3.2.0
 types-python-dateutil==2.9.0.20241206
