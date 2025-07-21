@@ -1,8 +1,16 @@
 # SSMs-for-PO-RL
-Implementation of S5 (and LSSLf) and FF, GRU and minGRU baselines for partially observable reinforcement learning
+The repository contains equinox based JAX implementations of S5 (and LSSLf) SSMs, together with feedforward, GRU and minGRU baselines, which can be run on partially observable reinforcement learning environments. The codebase includes a PPO algorithm suitable for recurrent architectures, environments from the popjaxRL (TODO: cite) suite and a JAX implementation of the memory corridor environment (TODO: cite). 
+
+## Running the code
+To codebase uses `.yaml` configuration files to store hyperparameters. The codebase is set up to run batches of these configurations from (sub)folders in the `configs` directory. 
+Below is an example of a bash command runnning PPO for all models, environments and hyperparameters found in the `exampleconfigs` folder
+
+```bash 
+python algorithms/PPO.py -cfg configs/exampleconfigs
+```
 
 
-# !Read Before Running!
+# :warning: Read Before Running :warning:
 In the current version of the code the parameter labels of equinox models created by optax are callables, whereas optax should treat them as non-callable. 
 To run the code minor changes to optax are required. 
 
