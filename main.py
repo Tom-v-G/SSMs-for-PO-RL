@@ -7,7 +7,7 @@ path_root = Path(__file__).parents[1]
 sys.path.append(str(path_root))
 
 from utils import load_yaml_config
-from algorithms.PPO_V2_done_signal import train
+from algorithms.PPO import train
 
 import numpy as np
 
@@ -31,4 +31,3 @@ if __name__ == "__main__":
                 for i in range(cfg.num_reps):
                     cfg = load_yaml_config(filepath) # to reset seed
                     train(cfg)
-        

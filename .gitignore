@@ -1,0 +1,6 @@
+/data
+/logging
+/envs
+/__pycache__
+/wandb
+*.pyc

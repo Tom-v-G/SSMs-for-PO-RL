@@ -504,7 +504,7 @@ def train(cfg):
     OmegaConf.save(config=cfg, f=f"{save_dir}/config.yaml", resolve=True)
     if cfg.PPOConfig.wandb:
         logger = wandb.init(
-            entity = "tom-v-gelooven-leiden-university",
+            entity = "...",
             project = "Thesis",
             config = wandb.helper.parse_config(
                 cfg2dict(cfg),

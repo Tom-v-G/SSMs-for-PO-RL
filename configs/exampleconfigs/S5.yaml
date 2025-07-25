@@ -1,13 +1,13 @@
-uid: minGRU all envs
-model: "minGRU"
+uid: S5 
+model: "S5"
 env_name: "RepeatPreviousEasy"
 env_action_embedding: true
 checkpoint: null
 store_model: false
-num_reps: 5
+num_reps: 3
 
 logging:
-  save_path: /home/tom/Documents/Master/Thesis/logging
+  save_path: logging
 
 PPOConfig:
   ssm_lr: 1.e-5

@@ -1,0 +1,52 @@
+uid: minGRU example
+model: "minGRU"
+env_name: "RepeatFirstEasy"
+env_action_embedding: true
+checkpoint: null
+store_model: false
+num_reps: 3
+
+logging:
+  save_path: logging
+
+PPOConfig:
+  ssm_lr: 1.e-5
+  learning_rate: 5.e-5
+  anneal_lr: false
+  gamma:  0.99
+  gae_lambda: 1.
+  max_grad_norm: 0.5
+  clip_coef: 0.2
+  clip_coef_vf: 0.2 # Depends on the reward scaling !
+  ent_coef: 0.0
+  vf_coef: 1.
+
+  total_timesteps: 3e6
+  num_envs: 64
+  num_steps: 1024 # steps per environment
+  num_minibatches: 8 # Number of mini-batches
+  update_epochs: 30 # K epochs to update the policy
+
+  test_envs: 32
+
+  seed: null
+  debug: true
+  wandb: false
+
+modelparameters:
+  residuallayers: 4
+  actor_hiddenlayers: [128, 128]
+  critic_hiddenlayers: [128, 128]
+  kernelparameters:
+    N: 256
+    H: 256
+    dt_log_bounds: 
+      - -3 
+      - -1
+    conj_symmetry: false
+    HiPPO_B: false
+    use_feedthrough: true
+    discretizer: "ZOH"
+    p_dropout: 0.1
+    use_layernorm: false
+    GLU_activation: true
