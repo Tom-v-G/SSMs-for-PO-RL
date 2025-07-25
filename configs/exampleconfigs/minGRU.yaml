@@ -1,4 +1,4 @@
-uid: minGRU example
+uid: Example Configs
 model: "minGRU"
 env_name: "RepeatFirstEasy"
 env_action_embedding: true

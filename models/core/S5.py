@@ -67,7 +67,14 @@ class S5SSM(eqx.Module):
 
     def __call__(self, u, x, d):
         """
-        u : (L, H)
+        Input shapes
+        u: (L, H)
+        x: (N)
+        d: (L)
+
+        Output shapes:
+        y: (L, H)
+        x: (N)
         """
         if self.discretizer == "ZOH":
             Lambda, B = ZOH(self.Lambda, self.B, self.deltas)

@@ -1,5 +1,5 @@
 # SSMs-for-PO-RL
-The repository contains equinox based JAX implementations of S5 (and LSSLf) SSMs, together with feedforward, GRU and minGRU baselines, which can be run on partially observable reinforcement learning environments. The codebase includes a PPO algorithm suitable for recurrent architectures, environments from the popjaxRL (TODO: cite) suite and a JAX implementation of the memory corridor environment (TODO: cite). 
+The repository contains equinox based JAX implementations of S5 (and LSSLf) SSMs, together with feedforward, GRU and minGRU baselines, which can be run on partially observable reinforcement learning environments. The codebase includes a PPO algorithm suitable for recurrent architectures, environments from the popjaxRL suite and a JAX implementation of the memory corridor environment. The notebooks folder contains the code used to create the figures for my thesis with examples of how data from runs can be retrieved and analyzed. 
 
 ## Running the code
 To codebase uses `.yaml` configuration files to store hyperparameters. The codebase is set up to run batches of these configurations from (sub)folders in the `configs` directory. 

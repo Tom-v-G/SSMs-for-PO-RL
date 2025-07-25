@@ -1,4 +1,4 @@
-uid: S5 
+uid: Example Configs
 model: "S5"
 env_name: "RepeatPreviousEasy"
 env_action_embedding: true

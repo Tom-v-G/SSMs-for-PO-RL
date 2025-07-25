@@ -39,9 +39,14 @@ class minGRU(eqx.Module):
 
     def __call__(self, u, x, d=None):
         """
-        u: (L, H)
+        Input shapes
+        u: (L, N)
         x: (N)
         d: (L)
+
+        Output shapes:
+        y: (L, N)
+        x: (N)
         """
         
         # Create update and hidden values based on input
