@@ -14,9 +14,6 @@ python algorithms/PPO.py -cfg configs/exampleconfigs
 In the current version of the code the parameter labels of equinox models created by optax are callables, whereas optax should treat them as non-callable. 
 To run the code minor changes to optax are required. 
 
-regel 233 en 254 van transforms._combining.py (equinox modellen tellen als callable, terwijl dit niet de bedoeling is).
-Ook heb ik een keep_params_negative functie toegevoegd in transforms._constraining.py.
-
 Line 233 of `optax.transforms._combining.py` should be commented out
 ```python
  def init_fn(params):
